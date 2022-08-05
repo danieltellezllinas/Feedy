@@ -1,8 +1,8 @@
-# feedy
+# FeedyApp
 
-## Project setup
+## Start project
 ```
-yarn install
+yarn serve
 ```
 
 ### Compiles and hot-reloads for development
@@ -19,6 +19,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
