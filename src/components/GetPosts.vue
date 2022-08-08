@@ -1,19 +1,20 @@
 <template>
   <div v-for="post in posts" :key="post.id">
-    <div>
+    <a class="div--global" :href="`/posts/${post.id}`">
       <p>{{ post.title }}</p>
-      <p>post id: {{ post.id }}</p>
-    </div>
+      <p>Post id: {{ post.id }}</p>
+    </a>
+    <DeletePost :id="post.id"/>
   </div>
 </template>
 
 <script>
+import DeletePost from "@/components/DeletePost.vue";
 export default {
   name: "GetPosts",
-  props: {
-    msg: String,
+  components: {
+    DeletePost,
   },
-
   data() {
     const state = {
       posts: [],
@@ -33,10 +34,20 @@ export default {
           this.posts = json;
         });
     },
+    detailNote(post) {
+      console.log(post);
+    },
   },
 };
 </script>
 
-<!-- <style scoped>
-
-</style> -->
+<style scoped>
+.div--global {
+  background-color: #fdeee7;
+  display: flex;
+  width: fit-content;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 2px;
+}
+</style>

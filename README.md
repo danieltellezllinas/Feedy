@@ -1,10 +1,5 @@
 # FeedyApp
 
-## Start project
-```
-yarn serve
-```
-
 ### Compiles and hot-reloads for development
 ```
 yarn serve
