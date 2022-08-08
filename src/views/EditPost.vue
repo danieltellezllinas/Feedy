@@ -90,6 +90,7 @@ input{
       width: -webkit-fill-available;
       border: none;
     font-size: 16px;
+    border-bottom: 1px solid grey;
 }
 
 .div--bodyedit{
