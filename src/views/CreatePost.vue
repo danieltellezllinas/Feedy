@@ -36,10 +36,13 @@ export default {
       })
         .then((response) => response.json())
         .then(() => {
-                this.$router.push('/posts').then(() => {
-                    window.alert('Post created')
-                })
-            }).catch((err) => { console.error(err) });
+          this.$router.push("/posts").then(() => {
+            window.alert("Post created");
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     },
   },
 };

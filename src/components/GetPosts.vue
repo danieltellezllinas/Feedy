@@ -4,7 +4,7 @@
       <p>{{ post.title }}</p>
       <p>Post id: {{ post.id }}</p>
     </a>
-    <DeletePost :id="post.id"/>
+    <DeletePost :id="post.id" />
   </div>
 </template>
 

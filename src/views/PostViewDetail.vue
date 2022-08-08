@@ -1,6 +1,7 @@
 <template>
   <div>
     <div v-if="post !== null">
+      <a :href="`/posts/edit/${post.id}`">Edit post {{ id }}</a>
       <DeletePost :id="post.id" />
       <p>{{ post.title }}</p>
       <p>{{ post.body }}</p>
