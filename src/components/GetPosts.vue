@@ -2,9 +2,7 @@
 <h1 class="h1--titleglobal">Post Lists</h1>
 <div class="div--global">
   <div class="div--globalpost" v-for="post in posts" :key="post.id">
-    <a :href="`/posts/${post.id}`">
-      <p>{{ post.title }}</p>
-    </a>
+    <router-link :to="`/posts/${post.id}`">{{ post.title }}</router-link>
     <DeletePost :id="post.id" />
   </div>
 </div>
@@ -45,6 +43,10 @@ export default {
 .h1--titleglobal{
   font-size: 70px;
   padding: 20px;
+}
+
+a{
+  color: #262626;
 }
 
 .div--globalpost {
