@@ -1,12 +1,17 @@
 <template>
 <h1 class="h1--titleglobal">Create Post</h1>
-  <div>
-    Title:
+<div class="div--globaleditpost">
+  <div class="div--titleedit">
+    <p>Title:</p>
     <input type="text" v-model="post.title" />
-    The title is: {{ post.title }}
+  </div>
+  <div class="div--bodyedit">
+    <p>Body:</p>
     <input type="text" v-model="post.body" />
-    The body is: {{ post.body }}
-    <button v-on:click="createPost(post)">Create</button>
+  </div>
+  <div class="div--buttonedit">
+    <button class='button--edit' v-on:click="createPost(post)">Create</button>
+  </div>
   </div>
 </template>
 

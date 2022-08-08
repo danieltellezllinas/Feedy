@@ -1,11 +1,17 @@
 <template>
 <h1 class="h1--titleglobal">Edit Post</h1>
-  <div>
-    <p>Title:</p>
-    <input type="text" v-model="post.title" />
-    <p>Body:</p>
-    <input type="text" v-model="post.body" />
-    <button v-on:click="editPost(post)">Editar</button>
+  <div class="div--globaleditpost">
+    <div class="div--titleedit">
+      <p>Title:</p>
+      <input type="text" v-model="post.title" />
+    </div>
+    <div class="div--bodyedit">
+      <p>Body:</p>
+      <input type="text" v-model="post.body" />
+    </div>
+    <div class="div--buttonedit">
+      <button class='button--edit' v-on:click="editPost(post)">Edit</button>
+    </div>
   </div>
 </template>
 
@@ -65,5 +71,44 @@ export default {
 .h1--titleglobal{
   font-size: 70px;
   padding: 20px;
+}
+
+p{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.div--titleedit{
+  margin-bottom: 20px;
+}
+
+.div--globaleditpost{
+  margin: 20px;
+}
+
+input{
+      width: -webkit-fill-available;
+      border: none;
+    font-size: 16px;
+}
+
+.div--bodyedit{
+  margin-bottom: 30px;
+}
+
+.button--edit{
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 2px;
+  background-color: #8bc34a;
+    color: white;
+    font-weight: 700;
+}
+
+.div--buttonedit{
+  display: flex;
+  justify-content: end;
+  padding-top: 25px;
 }
 </style>
