@@ -1,16 +1,20 @@
 <template>
   <div>
     <div v-if="post !== null">
-    <div class="div--iconseditanddelete">
-      <div class="div--globaliconseditanddelete">
-        <a :href="`/posts/edit/${post.id}`"><img class='img--iconedit' src='https://cdn-icons-png.flaticon.com/512/1159/1159633.png'/></a>
-        <DeletePost :id="post.id" />
+      <div class="div--iconseditanddelete">
+        <div class="div--globaliconseditanddelete">
+          <a :href="`/posts/edit/${post.id}`"
+            ><img
+              class="img--iconedit"
+              src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png"
+          /></a>
+          <DeletePost :id="post.id" />
+        </div>
       </div>
-    </div>
-    <div class="div--globaltitleandbody">
-      <p class="p--titlepost">{{ post.title }}</p>
-      <p class="p--bodypost">{{ post.body }}</p>
-    </div>
+      <div class="div--globaltitleandbody">
+        <p class="p--titlepost">{{ post.title }}</p>
+        <p class="p--bodypost">{{ post.body }}</p>
+      </div>
     </div>
     <div v-else>Loading</div>
   </div>
@@ -41,6 +45,8 @@ export default {
         .then((response) => response.json())
         .then((json) => {
           this.post = json;
+          this.$store.state.post = this.post;
+          this.$store.dispatch("addPostAction");
         });
     },
   },
@@ -48,13 +54,12 @@ export default {
 </script>
 
 <style>
-
-.img--iconedit{
+.img--iconedit {
   width: 20px;
   height: fit-content;
 }
 
-.div--globaliconseditanddelete{
+.div--globaliconseditanddelete {
   width: 100px;
   height: 50px;
   display: flex;
@@ -62,17 +67,17 @@ export default {
   justify-content: space-around;
 }
 
-.p--titlepost{
+.p--titlepost {
   font-size: 30px;
   margin-bottom: 20px;
 }
 
-.div--globaltitleandbody{
+.div--globaltitleandbody {
   padding: 16px;
 }
 
-.div--iconseditanddelete{
+.div--iconseditanddelete {
   display: flex;
-    justify-content: end;
+  justify-content: end;
 }
 </style>

@@ -4,6 +4,7 @@ import PostsListView from "../views/PostsListView.vue";
 import PostViewDetail from "../views/PostViewDetail.vue";
 import CreatePost from "../views/CreatePost.vue";
 import EditPost from "../views/EditPost.vue";
+import LastPosts from "../views/LastPosts.vue";
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: "/posts/edit/:id",
     name: "postsEdit",
     component: EditPost,
+  },
+  {
+    path: "/lastposts",
+    name: "lastPosts",
+    component: LastPosts,
   },
   {
     path: "/posts/:id",
