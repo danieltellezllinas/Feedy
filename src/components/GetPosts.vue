@@ -1,11 +1,13 @@
 <template>
-  <div v-for="post in posts" :key="post.id">
-    <a class="div--global" :href="`/posts/${post.id}`">
+<h1 class="h1--titleglobal">Post Lists</h1>
+<div class="div--global">
+  <div class="div--globalpost" v-for="post in posts" :key="post.id">
+    <a :href="`/posts/${post.id}`">
       <p>{{ post.title }}</p>
-      <p>Post id: {{ post.id }}</p>
     </a>
     <DeletePost :id="post.id" />
   </div>
+</div>
 </template>
 
 <script>
@@ -39,12 +41,26 @@ export default {
 </script>
 
 <style scoped>
-.div--global {
+
+.h1--titleglobal{
+  font-size: 70px;
+  padding: 20px;
+}
+
+.div--globalpost {
   background-color: #fdeee7;
   display: flex;
   width: fit-content;
   margin: 20px;
   padding: 20px;
   border-radius: 2px;
+  color: #262626;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.div--global{
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
+<h1 class="h1--titleglobal">Edit Post</h1>
   <div>
-    Title:
+    <p>Title:</p>
     <input type="text" v-model="post.title" />
-    The title is: {{ post.title }}
+    <p>Body:</p>
     <input type="text" v-model="post.body" />
-    The body is: {{ post.body }}
-    <button v-on:click="editPost(post)">Aceptar</button>
+    <button v-on:click="editPost(post)">Editar</button>
   </div>
 </template>
 
@@ -60,3 +60,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.h1--titleglobal{
+  font-size: 70px;
+  padding: 20px;
+}
+</style>

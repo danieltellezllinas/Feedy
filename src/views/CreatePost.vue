@@ -1,4 +1,5 @@
 <template>
+<h1 class="h1--titleglobal">Create Post</h1>
   <div>
     Title:
     <input type="text" v-model="post.title" />
@@ -47,3 +48,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.h1--titleglobal{
+  font-size: 70px;
+  padding: 20px;
+}
+</style>

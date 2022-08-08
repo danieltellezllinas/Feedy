@@ -1,10 +1,16 @@
 <template>
   <div>
     <div v-if="post !== null">
-      <a :href="`/posts/edit/${post.id}`">Edit post {{ id }}</a>
-      <DeletePost :id="post.id" />
-      <p>{{ post.title }}</p>
-      <p>{{ post.body }}</p>
+    <div class="div--iconseditanddelete">
+      <div class="div--globaliconseditanddelete">
+        <a :href="`/posts/edit/${post.id}`"><img class='img--iconedit' src='https://cdn-icons-png.flaticon.com/512/1159/1159633.png'/></a>
+        <DeletePost :id="post.id" />
+      </div>
+    </div>
+    <div class="div--globaltitleandbody">
+      <p class="p--titlepost">{{ post.title }}</p>
+      <p class="p--bodypost">{{ post.body }}</p>
+    </div>
     </div>
     <div v-else>Loading</div>
   </div>
@@ -40,3 +46,33 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.img--iconedit{
+  width: 20px;
+  height: fit-content;
+}
+
+.div--globaliconseditanddelete{
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.p--titlepost{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.div--globaltitleandbody{
+  padding: 16px;
+}
+
+.div--iconseditanddelete{
+  display: flex;
+    justify-content: end;
+}
+</style>
