@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 export default {
   name: "EditPost",
 
@@ -35,7 +34,6 @@ export default {
         .then((response) => response.json())
         .then((json) => {
           this.post = json;
-          console.log(this.post);
         });
     },
     editPost(postData) {

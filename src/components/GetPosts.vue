@@ -34,9 +34,6 @@ export default {
           this.posts = json;
         });
     },
-    detailNote(post) {
-      console.log(post);
-    },
   },
 };
 </script>
