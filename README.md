@@ -23,7 +23,7 @@ Detalle de la nota
 - Para gestionar las notas utilizar la siguiente API externa:
 https://jsonplaceholder.typicode.com/
 
-- Mostrar el uso de GET POST PATCH y DELETE.
+- Mostrar el uso de GET POST y DELETE.
 
 - Hacer uso del Vuex o Redux (Ejemplo almacenar y listar las
 últimas 5 notas vistas por el usuario)
